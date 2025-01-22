@@ -157,8 +157,8 @@ I use:
 To lint & format your code:
 
 ```bash
-make format   # runs black + isort on src/ and tests/
-make lint     # runs pylint (or flake8) on src/ and tests/
+make format   # runs black on src/ and tests/
+make lint     # runs pylint on src/ and tests/
 ```
 
 Or run everything (install, format, lint, test) in one step:
