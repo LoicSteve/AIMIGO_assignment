@@ -1,5 +1,15 @@
 # ETL/Pipeline engineer missions
 
+
+
+Final Notes
+If all you need is to verify the solution, just run:
+   ```bash
+   python -m pytest _etl_a9number_v3.py
+   ```
+to confirm mission #1 and #2 are satisfied.
+If you’d like a more production-ready approach, explore our enhanced modular code and Docker setup below.
+
 A Python-based project that demonstrates:
 - Extracting text from a PDF (excluding figure captions),
 - Tokenizing and counting occurrences of specific words or phrases,
@@ -20,7 +30,6 @@ A Python-based project that demonstrates:
 7. [Linting & Formatting](#linting--formatting)  
 8. [Profiling](#profiling)  
 9. [Docker Usage](#docker-usage)  
-10. [License](#license)
 
 ---
 
