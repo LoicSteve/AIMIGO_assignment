@@ -1,5 +1,5 @@
 # ETL/Pipeline engineer missions
-
+[![CI](https://github.com/LoicSteve/AIMIGO_assignment/actions/workflows/main.yml/badge.svg)](https://github.com/LoicSteve/AIMIGO_assignment/actions/workflows/main.yml)
 
 Notes
 If all you need is to verify the solution, just run:
