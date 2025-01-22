@@ -1,11 +1,4 @@
-# AIMIGO_assignment
-
-
-Below is an example **README.md** that you can adapt for your own project. It’s written in Markdown and showcases each step clearly, from installation to Docker usage. Feel free to customize project name, descriptions, badges, or any details as needed.
-
----
-
-# ETL Exercise (A9Number_v3)
+# ETL/Pipeline engineer missions
 
 A Python-based project that demonstrates:
 - Extracting text from a PDF (excluding figure captions),
