@@ -4,6 +4,8 @@
 Notes
 If all you need is to verify the solution, just run:
    ```bash
+   pip install -r requirements.txt
+   and
    python -m pytest _etl_a9number_v3.py
    ```
 to confirm mission #1 and #2 are satisfied.
