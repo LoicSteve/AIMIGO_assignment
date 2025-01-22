@@ -62,17 +62,20 @@ A suggested structure might look like:
 .
 ├── _etl_a9number_v3.py
 ├── Dockerfile
+├── etl_sample.pdf
 ├── Makefile
 ├── README.md
 ├── requirements.txt
 ├── src/
+│   ├── __init__.py
+│   ├── pdf_cli.py
 │   ├── pdf_extractor.py
 │   ├── text_tokenizer.py
-│   ├── occurrence_counter.py
+│   ├── occurence_counter.py
 │   ├── main.py
 ├──  tests/
 │   ├── test_occurrence_counter.py
-│    ├── __init__.py
+│   ├── __init__.py
 └── .github/
    └── workflows/
        └── main.yml   (GitHub Actions CI workflow)
