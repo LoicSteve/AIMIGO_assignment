@@ -29,12 +29,14 @@ A Python-based project that demonstrates:
 7. [Linting & Formatting](#linting--formatting)  
 8. [Profiling](#profiling)  
 9. [Docker Usage](#docker-usage)  
+10. [CI Pipeline](#ci-pipeline)  
 
 ---
 
 ## Overview
 
 This project extracts text from a PDF file (omitting figure captions), tokenizes the text, and counts how many times a word (or multi-word phrase) appears, respecting punctuation nuances like apostrophes and dashes. It also has a performance profiling script and uses best practices (linting, formatting, testing) for maintainable code.
+Offering a clean pipeline (via **Makefile**, **Docker**, and **CI**) for an efficient developer experience.
 
 ---
 
@@ -46,6 +48,7 @@ This project extracts text from a PDF file (omitting figure captions), tokenizes
 - **Modular**: Each piece (PDF extraction, tokenization, counting logic, etc.) is in its own module.  
 - **Continuous Integration Friendly**: With a `Makefile`, you can easily install dependencies, format code, lint, and test in one step.  
 - **Docker**: Containerize the project for consistent development and testing.
+- **Integrated CI Pipeline**: GitHub Actions workflow to run tests and checks on every push.
 
 ---
 
@@ -65,9 +68,13 @@ A suggested structure might look like:
 │   ├── text_tokenizer.py
 │   ├── occurrence_counter.py
 │   ├── main.py
-└── tests/
+├──  tests/
     ├── test_occurrence_counter.py
-    └── __init__.py
+    ├── __init__.py
+└── .github/
+   ├── workflows/
+       └── main.yml   (GitHub Actions CI workflow)
+
 ```
 
 
@@ -88,7 +95,7 @@ A suggested structure might look like:
 1. **Clone** the repository or download the ZIP:
    ```bash
    git clone https://github.com/LoicSteve/AIMIGO_assignment.git
-   cd Konvu_assignment_Loic
+   cd AIMIGO_assignment
    ```
 2. **Create** and activate a virtual environment (optional but recommended):
    ```bash
@@ -111,7 +118,7 @@ A suggested structure might look like:
 
 ## Running Tests
 
-We use **pytest** for all unit tests. To run the tests:
+I use **pytest** for all unit tests. To run the tests:
 
 ```bash
 make test
@@ -138,9 +145,9 @@ tests/test_occurrence_counter.py . . .
 
 ## Linting & Formatting
 
-We use:
-- **pylint** (or flake8) for linting  
-- **black** and **isort** for code formatting  
+I use:
+- **pylint** for linting  
+- **black** for code formatting  
 
 To lint & format your code:
 
@@ -154,7 +161,6 @@ Or run everything (install, format, lint, test) in one step:
 ```bash
 make all
 ```
-(*this is customizable in your Makefile.*)
 
 ---
 
@@ -163,11 +169,7 @@ make all
 We have a profiling function `test_profile()` that uses **cProfile** to measure performance of the code:
 
 ```bash
-# Method 1: run directly via Python
 python -c "from src.main import test_profile; test_profile()"
-
-# Method 2: if you have a test_profile target in Makefile
-make profile
 ```
 
 This will print out timing statistics so you can see if your code is performant.
@@ -193,6 +195,19 @@ You can build and run the project inside a Docker container to ensure a reproduc
    ```
 
 This ensures your code runs the same way on any machine with Docker installed.
+
+
+## CI Pipeline
+
+This repository leverages **GitHub Actions** to **automatically**:
+1. Install dependencies,  
+2. Run lint checks,  
+3. Execute the test suite,  
+4. (Optionally) build and push Docker images or gather coverage artifacts.
+
+The current status of the pipeline is shown by the badge below:
+
+[![CI](https://github.com/LoicSteve/AIMIGO_assignment/actions/workflows/main.yml/badge.svg)](https://github.com/LoicSteve/AIMIGO_assignment/actions/workflows/main.yml)
 
 ---
 
