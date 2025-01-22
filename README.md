@@ -1,8 +1,7 @@
 # ETL/Pipeline engineer missions
 
 
-
-Final Notes
+Notes
 If all you need is to verify the solution, just run:
    ```bash
    python -m pytest _etl_a9number_v3.py
