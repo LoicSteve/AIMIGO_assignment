@@ -69,10 +69,10 @@ A suggested structure might look like:
 │   ├── occurrence_counter.py
 │   ├── main.py
 ├──  tests/
-    ├── test_occurrence_counter.py
-    ├── __init__.py
+│   ├── test_occurrence_counter.py
+│    ├── __init__.py
 └── .github/
-   ├── workflows/
+   └── workflows/
        └── main.yml   (GitHub Actions CI workflow)
 
 ```
