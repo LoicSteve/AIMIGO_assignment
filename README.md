@@ -1,4 +1,4 @@
-# ETL/Pipeline engineer missions
+# ETL/Pipeline engineer
 [![CI](https://github.com/LoicSteve/AIMIGO_assignment/actions/workflows/main.yml/badge.svg)](https://github.com/LoicSteve/AIMIGO_assignment/actions/workflows/main.yml)
 
 Notes
